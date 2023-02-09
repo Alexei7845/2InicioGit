@@ -28,13 +28,13 @@ const setMusic = (i) => {
     music.src = song.path
     songName.innerHTML = song.name
     artistName.innerHTML = song.artist
-    disk.getElementsByClassName.backgroundImage = `url(${song.cover})`
+    disk.style.backgroundImage = `url('${song.cover}')`
     currentTime.innerHTML = '00:00'
     //Ponemos un delay
     setTimeout(() => {
         seekBar.max = music.duration
         musicDuration.innerHTML = formatTime(music.duration)
-    }, 500)
+    }, 1000)
 }
 
 setMusic(0)
